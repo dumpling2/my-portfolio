@@ -1,10 +1,11 @@
-import '@mdi/font/css/materialdesignicons.css';
-import { createVuetify } from 'vuetify';
+import '@mdi/font/css/materialdesignicons.css'
+import 'vuetify/lib/styles/main.sass'
+import { createVuetify } from 'vuetify'
+import { aliases, mdi } from 'vuetify/lib/iconsets/mdi'
 import * as components from 'vuetify/lib/components';
 import * as directives from 'vuetify/lib/directives';
-import { aliases, mdi } from 'vuetify/lib/iconsets/mdi';
 
-const vuetify = createVuetify({
+export default createVuetify({
   theme: {
     defaultTheme: 'myTheme',
     themes: {
@@ -28,6 +29,4 @@ const vuetify = createVuetify({
       mdi,
     },
   },
-});
-
-export default vuetify;
+})

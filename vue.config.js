@@ -10,7 +10,7 @@ module.exports = defineConfig({
 
   pwa: {
     name: 'My Portfolio',
-    themeColor: '##E0E0E0', // テーマカラー
+    themeColor: '#E0E0E0', // テーマカラー
     msTileColor: '#E0E0E0', // Windowsタイルのカラー
     appleMobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: 'myTheme',

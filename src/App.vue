@@ -24,22 +24,21 @@
     </v-main>
   </v-app>
 </template>
-
-
 <script>
 export default {
-  name: "App",
+  name: 'App',
   data() {
     return {
       drawer: false,
       routes: [
         { path: "/", name: "Home", icon: "mdi-home" },
-        { path: "/about", name: "About", icon: "mdi-account" },
-        { path: "/portfolio", name: "Portfolio", icon: "mdi-briefcase" },
-        { path: "/skills", name: "Skills", icon: "mdi-chart-bubble" },
+        { path: "/about", name: "業務内容", icon: "mdi-account" },
+        { path: "/portfolio", name: "制作物", icon: "mdi-briefcase" },
+        { path: "/skills", name: "経験言語", icon: "mdi-chart-bubble" },
         { path: "/contact", name: "Contact", icon: "mdi-email" },
       ],
-    };
-  },
-};
+    }
+  }
+}
+
 </script>
