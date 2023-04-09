@@ -6,20 +6,28 @@ module.exports = defineConfig({
     vuetify: {
 			// https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader
 		}
-  }
-})
-module.exports = {
+  },
+
   pwa: {
     name: 'My Portfolio',
-    themeColor: '#4DBA87',
-    msTileColor: '#000000',
+    themeColor: '##E0E0E0', // テーマカラー
+    msTileColor: '#E0E0E0', // Windowsタイルのカラー
     appleMobileWebAppCapable: 'yes',
-    appleMobileWebAppStatusBarStyle: 'black',
+    appleMobileWebAppStatusBarStyle: 'myTheme',
 
+    // アイコンの設定
+    iconPaths: {
+      favicon32: 'img/icons/32-32.png',
+      favicon16: 'img/icons/16-16.png',
+      appleTouchIcon: 'img/icons/android129-129.png',
+      maskIcon: 'img/icons/safari-pinned-tab.svg',
+      msTileImage: 'img/icons/android129-129.png'
+    },
+
+    // オフライン時にキャッシュするリソースを指定
     workboxPluginMode: 'GenerateSW',
     workboxOptions: {
-      skipWaiting: true,
-      clientsClaim: true,
+      navigateFallback: '/index.html',
       runtimeCaching: [
         {
           urlPattern: new RegExp('^https://fonts.(?:googleapis|gstatic).com/(.*)'),
@@ -28,11 +36,11 @@ module.exports = {
             cacheName: 'google-fonts',
             expiration: {
               maxEntries: 30,
-              maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
+              maxAgeSeconds: 60 * 60 * 24 * 365 // 1年
             },
           },
         },
       ],
     },
   },
-};
+});
